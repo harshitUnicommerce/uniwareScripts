@@ -22,7 +22,7 @@ else
 	MAIL_SUBJECT="Unifill API Address Export | ${current_date}"
 	MAIL_CONTENT="Please find the attachment. Build triggered by ${BUILD_TRIGGER_BY}"
 
-	echo ${MAIL_CONTENT} | mutt -s "${MAIL_SUBJECT}" -a "${reportFilename}" -c "${MAIL_RECIPIENTS_CC}" -- "${MAIL_RECIPIENTS}"
+	echo ${MAIL_CONTENT} | mutt -s "${MAIL_SUBJECT}" -a "${reportFilename}" -- "${MAIL_RECIPIENTS}"
 fi
 
 
